@@ -5,7 +5,7 @@
   "description": "Shrinkr is a small URL shortener built with Node.js, Express, TypeScript, and PostgreSQL.",
   "scripts": {
     "dev": "tsc && cp dist/public/script.js public/script.js && tsx watch src/index.ts",
-    "build": "tsc && cp public/index.html public/styles.css dist/public/",
+    "build": "tsc && cp public/index.html public/styles.css dist/public/ && cp schema.sql dist/schema.sql",
     "start": "node dist/src/index.js",
     "test": "vitest run",
     "db:setup": "tsx scripts/init-db.ts"
