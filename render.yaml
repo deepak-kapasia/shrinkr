@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: shrinkr
+    runtime: node
+    plan: free
+    buildCommand: npm ci && npm run build
+    startCommand: node dist/scripts/init-db.js && npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BASE_URL
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: shrinkr-db
+          property: connectionString
+      - key: TRUST_PROXY
+        value: "1"
+      - key: RATE_LIMIT_MAX
+        value: "30"
+
+databases:
+  - name: shrinkr-db
+    plan: free
+    databaseName: shrinkr
+    user: shrinkr

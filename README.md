@@ -52,6 +52,12 @@ RATE_LIMIT_MAX=30
 
 Use a process manager or container platform to restart the process after failures, terminate it with `SIGTERM`, and provide HTTPS through a reverse proxy. The `/health` endpoint is a lightweight liveness check.
 
+## Deploy with Render
+
+The repository includes `render.yaml`, which defines a Node web service and a PostgreSQL database. In Render, create a new Blueprint from the `deepak-kapasia/shrinkr` GitHub repository. When prompted for `BASE_URL`, enter the HTTPS URL Render assigns to the service. The included start command initializes the small schema before starting the server.
+
+Render's free web service and free PostgreSQL plans are useful for testing, but the free database expires after 30 days and has no backups. Use a paid PostgreSQL plan for real production data.
+
 ## API
 
 ### `POST /api/shorten`
