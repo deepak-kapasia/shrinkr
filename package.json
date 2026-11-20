@@ -1,0 +1,28 @@
+{
+  "name": "simple-url-shortener",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A small URL shortener built with Node.js, Express, TypeScript, and PostgreSQL.",
+  "scripts": {
+    "dev": "tsc && cp dist/public/script.js public/script.js && tsx watch src/index.ts",
+    "build": "tsc && cp public/index.html public/styles.css dist/public/",
+    "start": "node dist/src/index.js",
+    "test": "vitest run",
+    "db:setup": "tsx scripts/init-db.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.3.0",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.2",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
