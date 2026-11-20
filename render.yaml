@@ -12,16 +12,8 @@ services:
       - key: BASE_URL
         sync: false
       - key: DATABASE_URL
-        fromDatabase:
-          name: shrinkr-db
-          property: connectionString
+        sync: false
       - key: TRUST_PROXY
         value: "1"
       - key: RATE_LIMIT_MAX
         value: "30"
-
-databases:
-  - name: shrinkr-db
-    plan: free
-    databaseName: shrinkr
-    user: shrinkr

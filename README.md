@@ -54,9 +54,9 @@ Use a process manager or container platform to restart the process after failure
 
 ## Deploy with Render
 
-The repository includes `render.yaml`, which defines a Node web service and a PostgreSQL database. In Render, create a new Blueprint from the `deepak-kapasia/shrinkr` GitHub repository. When prompted for `BASE_URL`, enter the HTTPS URL Render assigns to the service. The included start command initializes the small schema before starting the server.
+The repository includes `render.yaml`, which defines a Node web service. To keep the database free beyond Render's 30-day Postgres limit, create a free Neon PostgreSQL project separately and paste its connection string into Render's `DATABASE_URL` environment variable. When prompted for `BASE_URL`, enter the HTTPS URL Render assigns to the service. The included start command initializes the small schema before starting the server.
 
-Render's free web service and free PostgreSQL plans are useful for testing, but the free database expires after 30 days and has no backups. Use a paid PostgreSQL plan for real production data.
+Render's free web service sleeps after inactivity, and Neon free compute scales to zero when idle. These are good for a demo or learning project, but use paid infrastructure with backups for real production data.
 
 ## API
 
