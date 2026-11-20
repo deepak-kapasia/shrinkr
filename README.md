@@ -1,6 +1,6 @@
-# Simple URL Shortener
+# Shrinkr
 
-A small URL shortener built with Node.js, Express, TypeScript, PostgreSQL, and raw SQL. It has one HTML page and no frontend framework.
+Shrinkr is a small URL shortener built with Node.js, Express, TypeScript, PostgreSQL, and raw SQL. It has one HTML page and no frontend framework.
 
 ## Setup
 

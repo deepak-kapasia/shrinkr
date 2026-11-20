@@ -1,8 +1,8 @@
 {
-  "name": "simple-url-shortener",
+  "name": "shrinkr",
   "version": "1.0.0",
   "private": true,
-  "description": "A small URL shortener built with Node.js, Express, TypeScript, and PostgreSQL.",
+  "description": "Shrinkr is a small URL shortener built with Node.js, Express, TypeScript, and PostgreSQL.",
   "scripts": {
     "dev": "tsc && cp dist/public/script.js public/script.js && tsx watch src/index.ts",
     "build": "tsc && cp public/index.html public/styles.css dist/public/",

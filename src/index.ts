@@ -50,7 +50,7 @@ app.use((
 
 if (require.main === module) {
   const server = app.listen(config.port, () => {
-    console.log(`URL shortener listening at ${config.baseUrl}`);
+    console.log(`Shrinkr listening at ${config.baseUrl}`);
   });
 
   const shutdown = (signal: string): void => {
